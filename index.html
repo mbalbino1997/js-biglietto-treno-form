@@ -12,22 +12,22 @@
     <section>
         <div class="container">
             <h1 class="fs-3 text-center text-white my-4">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-            <form id="ticketForm" class="bg-white p-4 rounded">
+            <form id="ticketForm" class="bg-white p-4 rounded text-danger border border-dark">
                 <div class="row">
                     <div class="mb-3 col-4">
-                      <label for="name" class="form-label">Nome e Cognome</label>
-                      <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+                      <label for="name" class="form-label fw-bold">Nome e Cognome</label>
+                      <input type="text" class="form-control border border-danger fw-bold border-thick" id="name" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3 col-4">
-                      <label for="km" class="form-label">Km da percorrere</label>
-                      <input type="text" class="form-control" id="km">
+                      <label for="km" class="form-label fw-bold">Km da percorrere</label>
+                      <input type="text" class="form-control border border-danger fw-bold border-thick" id="km">
                     </div>
                     <div class="mb-3 col-4">
-                        <label for="age" class="form-label">Fascia d'età</label>
-                        <select name="age" id="age" class="form-control">
-                            <option value="maggiorenne">Maggiorenne</option>
-                            <option value="minorenne">Minorenne</option>
-                            <option value="over65">Over 65</option>
+                        <label for="age" class="form-label fw-bold">Fascia d'età</label>
+                        <select name="age" id="age" class="form-control border border-danger fw-bold border-thick">
+                            <option class="fw-bold" value="maggiorenne">Maggiorenne</option>
+                            <option class="fw-bold" value="minorenne">Minorenne</option>
+                            <option class="fw-bold" value="over65">Over 65</option>
                             
                         </select>
                     </div>
@@ -38,8 +38,43 @@
 
                 </div>
                 
-              </form>
-
+            </form>
+              <h1 class="fs-3 text-center text-white my-4">IL TUO BIGLIETTO</h1>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="bg-white p-4 rounded border border-dark">
+                
+                <h3 class="fw-bold fs-6">DETTAGLIO PASSEGGERI</h3>
+                <div class="row border-top border-bottom border-dark">
+                    <div class="col-4 bg-light">
+                        <strong>NOME PASSEGGERO</strong>
+                        <div>
+                            <strong id="user">-</strong>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <strong>offerta</strong>
+                        <div>
+                            <strong id="discount">-</strong>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <strong>carrozza</strong>
+                    </div>
+                    <div class="col-2">
+                        <strong>codice CP</strong>
+                    </div>
+                    <div class="col-2">
+                        <strong>Costo biglietto</strong>
+                        <div>
+                            <strong id="finalPrice">-</strong>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
         </div>
     </section>
       

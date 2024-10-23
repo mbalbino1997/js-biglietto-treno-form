@@ -4,27 +4,29 @@ document.getElementById("ticketForm").addEventListener("submit", function(event)
     const km = parseFloat(document.getElementById("km").value);
     const age = document.getElementById("age").value;
     const ticketPrice = 0.21*km;
-    console.log(ticketPrice)
     let discount = 0;
+    let discountName="Biglietto standard";
     if (isNaN(km) || km<0) {
         console.log("L'età e la distanza devono essere numeri maggiori di 0");
     } else {
         if (age==="minorenne") {
-            console.log("I minorenni hanno diritto ad uno sconto del 20%");
+            
             discount = ticketPrice*0.2;
+            discountName="Sconto minorenni(20%)";
         } else if (age==="over65") {
-            console.log("Gli over 65 hanno diritto ad uno sconto del 40%");
+            
             discount = ticketPrice*0.4;
-        } else if(age==="maggiorenne") {
-            console.log("Non hai diritto allo sconto");
-        
-        }
+            discountName="Sconto over 65(40%)"
+        } 
         const finalPrice =ticketPrice-discount;
         const finalPriceFormatted = new Intl.NumberFormat('it-IT', {
             style: 'currency', currency: 'EUR',
         }).format(finalPrice);
-        console.log('Il prezzo finale da pagare per il biglietto è: '+ finalPriceFormatted);
-    }
         
+    
+        document.getElementById("user").textContent=userName;
+        document.getElementById("finalPrice").textContent=finalPriceFormatted;
+        document.getElementById("discount").textContent=discountName;
+    }
 
 })
