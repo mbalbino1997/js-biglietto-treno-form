@@ -7,7 +7,7 @@ document.getElementById("ticketForm").addEventListener("submit", function(event)
     let discount = 0;
     let discountName="Biglietto standard";
     if (isNaN(km) || km<0) {
-        console.log("L'età e la distanza devono essere numeri maggiori di 0");
+        alert("L'età e la distanza devono essere numeri maggiori di 0");
     } else {
         if (age==="minorenne") {
             
