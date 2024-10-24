@@ -1,5 +1,6 @@
 document.getElementById("ticketForm").addEventListener("submit", function (event) {
     event.preventDefault();
+    document.getElementById("none").style.display="block";
     const userName = document.getElementById("name").value;
     const km = parseFloat(document.getElementById("km").value);
     const age = document.getElementById("age").value;
@@ -33,4 +34,7 @@ document.getElementById("ticketForm").addEventListener("submit", function (event
         document.getElementById("discount").textContent = discountName;
     }
 
+})
+document.getElementById("ticketForm").addEventListener("reset", function () {
+    document.getElementById("none").style.display="none";
 })
